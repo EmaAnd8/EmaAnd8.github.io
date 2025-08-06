@@ -1,58 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Profile</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Profile • Emanuele Andaloro</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/css/profile.css"/>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
-    </nav>
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">Emanuele Andaloro</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="profile-intro">
-      <h1>Emanuele Andaloro</h1>
-      <p>I’m Emanuele Andaloro, a Master’s candidate in Computer Science and Engineering at Politecnico di Milano, where I’m also vying to become a PoliMi Ambassador for Smart Infrastructures. With a first-class Bachelor’s degree in Computer Science and Engineering from Università di Catania, I thrive at the intersection of blockchain, cybersecurity, and hardware acceleration. Curious and adaptable, I’ve led and contributed to projects ranging from AI-driven well-being apps to deploying CNNs and custom ViTs on embedded NPUs. Outside of academics, I mentor middle-school students through Fondazione Cariplo’s TOP program and volunteer as a blood donor with AVIS. Feel free to connect on LinkedIn or explore my work on GitHub.
-</p>
-    </section>
-
-  <!-- In your HTML (e.g. index.html or profile.html) -->
-<section class="project">
-  <div class="project-container">
-    <!-- Left column: project image -->
-    <div class="project-image">
-      <img
-        
-      />
-    </div>
-    <!-- Right column: title, description, button -->
-    <div class="project-content">
-      <h2>    Embedding Deep Learning on STM32N6 Edge Devices</h2>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h2>About <span>Me</span></h2>
       <p>
-   
-Deployed and benchmarked quantized CNNs (YOLO v1, custom YOLO v5n) and a compact Vision Transformer on an STM32N6570-DK using ST’s Cube.AI toolchain. Achieved up to 510 FPS object detection with sub-2 ms latency on the NPU and analyzed trade-offs between accuracy, throughput, and model size.
+        I’m a Master’s candidate in Computer Science &amp; Engineering at Politecnico di Milano, specializing
+        in machine learning for cybersecurity, hardware acceleration, blockchain, and complex software engineering.
       </p>
-      <a href="projects/eye-disease.html" class="btn">Learn More</a>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Profile Tabs -->
+  <section class="profile">
+    <div class="container">
+      <div class="tabs">
+        <button data-tab="about" class="active">About</button>
+        <button data-tab="education">Education</button>
+        <button data-tab="experience">Experience</button>
+        <button data-tab="skills">Skills</button>
+        <button data-tab="volunteering">Volunteering</button>
+      </div>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Describe your work history or education here.</p>
-    </section>
-  </main>
+      <div class="tab-contents">
+        <div id="about" class="tab-content active">
+          <h3>About Me</h3>
+          <p>
+            I’m Emanuele, a Computer Science and Engineering student with a passion for blockchain,
+            cybersecurity, and hardware acceleration. I describe myself as an eclectic and curious
+            person who adapts seamlessly to any context, eagerly embracing new challenges and ideas.
+          </p>
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:emanuele.andaloro@mail.polimi.it">emanuele.andaloro@mail.polimi.it</a></li>
+            <li><strong>Phone:</strong> +39 388 886 8608</li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/emanuele-andaloro/">/in/emanuele-andaloro</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/EmaAnd8">github.com/EmaAnd8</a></li>
+          </ul>
+        </div>
 
+        <div id="education" class="tab-content">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <strong>Politecnico di Milano</strong><br/>
+              Master’s in Computer Science &amp; Engineering<br/>
+              Sept 2023 – Present (PoliMi Ambassador candidate)
+            </li>
+            <li>
+              <strong>Università di Catania</strong><br/>
+              Bachelor’s in Computer Science &amp; Engineering, 110/110<br/>
+              Sept 2018 – Feb 2023
+            </li>
+            <li>
+              <strong>I.T.T. “Ettore Majorana”</strong><br/>
+              High School Diploma (Industrial Computer Technician)<br/>
+              100/100, Sept 2014 – Jun 2018
+            </li>
+          </ul>
+        </div>
+
+        <div id="experience" class="tab-content">
+          <h3>Experience</h3>
+          <ul>
+            <li>
+              <strong>Explorer Tech</strong> (Computer Repair) — Sep 2017 – Oct 2017<br/>
+              Managed maintenance and deployed server environments.
+            </li>
+            <li>
+              <strong>Nagual Informatica</strong> (Support) — Jul 2015 – Aug 2015<br/>
+              Provided hardware/software support and configured Oracle servers.
+            </li>
+          </ul>
+        </div>
+
+        <div id="skills" class="tab-content">
+          <h3>Skills</h3>
+          <ul>
+            <li><strong>Programming:</strong> C++, C, Java, Python, C#, JavaScript, PHP, SQL, Flutter, VHDL, Arduino, Node.js</li>
+            <li><strong>Tech Stack:</strong> Laravel, Flask, MongoDB, DynamoDB, Neo4J, XAMPP, Raspberry Pi</li>
+            <li><strong>Languages:</strong> Italian (native), English (Cambridge First), Spanish (good)</li>
+          </ul>
+        </div>
+
+        <div id="volunteering" class="tab-content">
+          <h3>Volunteering</h3>
+          <ul>
+            <li><strong>AVIS Blood Donor</strong> — Nov 2022 – Present</li>
+            <li><strong>TOP Program Mentor</strong> — STEM tutor for middle-school students</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Emanuele Andaloro</p>
+    <div class="container">
+      <p>© 2025 Emanuele Andaloro</p>
+    </div>
   </footer>
+
+  <script src="/js/profile.js"></script>
 </body>
 </html>
