@@ -1,0 +1,71 @@
+/* css/profile.css */
+
+/* Active link highlight */
+.header-inner nav a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.tabs button {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.tabs button.active,
+.tabs button:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* Tab contents */
+.tab-contents .tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+.tab-contents .tab-content.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings and lists inside tabs */
+.tab-content h3 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.tab-content ul {
+  list-style: disc inside;
+  margin-bottom: 1.5rem;
+}
+.tab-content ul li {
+  margin-bottom: 0.75rem;
+  color: var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tabs {
+    gap: 0.25rem;
+  }
+  .tabs button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
