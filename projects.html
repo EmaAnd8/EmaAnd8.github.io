@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+  <title>Projects • Emanuele Andaloro</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
 
+  <!-- Header (same as index.html) -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">Emanuele Andaloro</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects Filter -->
+  <main>
+    <section class="projects">
+      <div class="container">
+        <h2>My Projects</h2>
+
+        <div class="filter-buttons">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="ai">AI & Well-Being</button>
+          <button data-filter="blockchain">Blockchain</button>
+          <button data-filter="mobile">Mobile</button>
+          <button data-filter="embedded">Embedded AI</button>
+          <button data-filter="robotics">Robotics</button>
+          <button data-filter="education">Education</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Leonardo Project -->
+          <div class="project-card" data-category="ai">
+            <img src="images/leonardo.jpg" alt="Leonardo App Screenshot">
+            <h3>Leonardo Well-Being AI</h3>
+            <p>
+              Winner of NECSTLab hackathon: an empathetic voice assistant that fosters user well-being. Presented at NGC14 in San Francisco.
+            </p>
+          </div>
+
+          <!-- BlockVerse -->
+          <div class="project-card" data-category="blockchain">
+            <img src="images/blockverse.png" alt="BlockVerse Dashboard">
+            <h3>BlockVerse Dashboard</h3>
+            <p>
+              A TOSCA-based blockchain topology editor built on Katena & Firebase. Visualize, edit and export Ethereum topologies.
+            </p>
+          </div>
+
+          <!-- Sensor Data App -->
+          <div class="project-card" data-category="mobile">
+            <img src="images/sensor-app.png" alt="Sensor Data App">
+            <h3>Sensor Data Collector</h3>
+            <p>
+              Flutter app capturing magnetometer, accelerometer, and gyroscope data in real time and uploading to Firebase.
+            </p>
+          </div>
+
+          <!-- CNN & ViT Deployment -->
+          <div class="project-card" data-category="embedded">
+            <img src="images/stm32n6-deploy.png" alt="STM32N6 Deployment">
+            <h3>CNN & ViT on STM32N6</h3>
+            <p>
+              Quantized CNNs and custom Vision Transformers on the NPU-equipped STM32N6570-DK—510 FPS object detection in 2 ms.
+            </p>
+          </div>
+
+          <!-- Coleottero Robot -->
+          <div class="project-card" data-category="robotics">
+            <img src="images/coleottero.jpg" alt="Coleottero Robot">
+            <h3>Coleottero Renewable Robot</h3>
+            <p>
+              Built at the Enel Green Power hackathon: a bio-inspired crawler (“coleottero”) for inspection & maintenance in solar and wind plants.
+            </p>
+          </div>
+
+          <!-- TOP Mentoring -->
+          <div class="project-card" data-category="education">
+            <img src="images/top-program.jpg" alt="TOP Tutoring">
+            <h3>TOP Online Tutoring</h3>
+            <p>
+              Mentor in Cariplo-Bocconi-Harvard-Bicocca program, delivering online STEM support to middle-schoolers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Emanuele Andaloro</p>
+    </div>
+  </footer>
+
+  <!-- External Filter JS -->
+  <script src="/js/projects.js"></script>
+</body>
+</html>
