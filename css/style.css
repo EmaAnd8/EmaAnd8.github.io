@@ -1,1 +1,212 @@
+/* ================
+   Variables & Reset
+   ================ */
+:root {
+  --primary: #0d6efd;
+  --white: #ffffff;
+  --dark: #212529;
+  --gray: #555;
+  --light-blue: #f8faff;
+  --max-width: 1000px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--white);
+}
 
+/* ============
+   Layout Utils
+   ============ */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ======
+   Header
+   ====== */
+header {
+  background: var(--white);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav li + li {
+  margin-left: 1.5rem;
+}
+nav a {
+  color: var(--dark);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: var(--primary);
+}
+
+/* =======
+   Hero
+   ======= */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 4rem 0;
+  background: var(--light-blue);
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+.hero h2 span {
+  color: var(--dark);
+}
+.hero p {
+  font-size: 1.125rem;
+  color: var(--gray);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+.hero .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.3s, color 0.3s;
+}
+.hero .btn.primary {
+  background: var(--primary);
+  color: var(--white);
+  border: 2px solid var(--primary);
+}
+.hero .btn.primary:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+.hero .btn.outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.hero .btn.outline:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* =======
+   About
+   ======= */
+.about {
+  padding: 4rem 0;
+  background: var(--white);
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.about-text {
+  flex: 1;
+}
+.about-text h3 {
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+.about-text p {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+.contact-list {
+  list-style: none;
+}
+.contact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.contact-list a {
+  color: var(--primary);
+}
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ======
+   Footer
+   ====== */
+footer {
+  background: var(--white);
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+}
+footer p {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+/* ==================
+   Responsive Tweaks
+   ================== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  nav li + li {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
