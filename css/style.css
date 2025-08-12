@@ -146,4 +146,47 @@ a:hover{ text-decoration: underline; }
 }
 .about-text{ flex: 1; }
 .about-text h3{
-  font-size:
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin: 0 0 .75rem 0;
+}
+.about-text p{
+  color: var(--muted);
+  margin: 0 0 1.25rem 0;
+}
+.contact-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list li{ margin-bottom: .5rem; font-size: .95rem; }
+.contact-list a{ word-break: break-word; }
+
+.about-image{ flex: 1; text-align: center; }
+.about-image img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top: 1px solid #eee;
+  background: var(--white);
+  padding-block: var(--space-3);
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  .about-container{ gap: var(--space-3); }
+}
+@media (max-width: 768px){
+  .about-container{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
