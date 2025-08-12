@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Projects • Emanuele Andaloro</title>
-  <link rel="stylesheet" href="/css/style.css"/>
-  <link rel="stylesheet" href="/css/projects.css" />
+  <link rel="stylesheet" href="css/projects.css"/>
+  <script src="/js/projects.js" defer></script>
 </head>
 <body>
 
-  <!-- Header (same as index.html) -->
-  <header>
+  <!-- Header -->
+  <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
         <a href="index.html">Emanuele Andaloro</a>
       </div>
-      <nav>
-        <ul>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="projects.html" class="active">Projects</a></li>
@@ -28,75 +25,55 @@
     </div>
   </header>
 
-  <!-- Projects Filter -->
+  <!-- Projects Section -->
   <main>
     <section class="projects">
       <div class="container">
         <h2>My Projects</h2>
 
-        <div class="filter-buttons">
-          <button data-filter="all" class="active">All</button>
-          <button data-filter="ai">AI & Well-Being</button>
-          <button data-filter="blockchain">Blockchain</button>
-          <button data-filter="mobile">Mobile</button>
-          <button data-filter="embedded">Embedded AI</button>
-          <button data-filter="robotics">Robotics</button>
-          <button data-filter="education">Education</button>
+        <!-- Filter Buttons -->
+        <div class="filter-buttons" role="tablist" aria-label="Project categories">
+          <button data-filter="all" class="active" role="tab" aria-selected="true">All</button>
+          <button data-filter="ai" role="tab">AI & Well-Being</button>
+          <button data-filter="blockchain" role="tab">Blockchain</button>
+          <button data-filter="mobile" role="tab">Mobile</button>
+          <button data-filter="embedded" role="tab">Embedded AI</button>
+          <button data-filter="robotics" role="tab">Robotics</button>
+          <button data-filter="education" role="tab">Education</button>
         </div>
 
+        <!-- Projects Grid -->
         <div class="projects-grid">
-          <!-- Leonardo Project -->
           <div class="project-card" data-category="ai">
-          
             <h3>Aurora Well-Being AI</h3>
-            <p>
-              Winner of NECSTLab hackathon: an empathetic voice assistant that fosters user well-being. Presented at NGC14 in San Francisco.
-            </p>
+            <p>Winner of NECSTLab hackathon: an empathetic voice assistant that fosters user well-being. Presented at NGC14 in San Francisco.</p>
           </div>
 
-          <!-- BlockVerse -->
           <div class="project-card" data-category="blockchain">
             <img src="images/blockverse.png" alt="BlockVerse Dashboard">
             <h3>BlockVerse Dashboard</h3>
-            <p>
-              A TOSCA-based blockchain topology editor built on Katena & Firebase. Visualize, edit and export Ethereum topologies.
-            </p>
+            <p>A TOSCA-based blockchain topology editor built on Katena & Firebase. Visualize, edit and export Ethereum topologies.</p>
           </div>
 
-          <!-- Sensor Data App -->
           <div class="project-card" data-category="mobile">
-           
             <h3>Sensor Data Collector</h3>
-            <p>
-              Flutter app capturing magnetometer, accelerometer, and gyroscope data in real time and uploading to Firebase.
-            </p>
+            <p>Flutter app capturing magnetometer, accelerometer, and gyroscope data in real time and uploading to Firebase.</p>
           </div>
 
-          <!-- CNN & ViT Deployment -->
           <div class="project-card" data-category="embedded">
             <img src="images/stm32n6-deploy.png" alt="STM32N6 Deployment">
             <h3>CNN & ViT on STM32N6</h3>
-            <p>
-              Quantized CNNs and custom Vision Transformers deploy  on the NPU-equipped STM32N6570-DK for Object Detection and Image Classification respectively
-            </p>
+            <p>Quantized CNNs and custom Vision Transformers deploy on the NPU-equipped STM32N6570-DK for Object Detection and Image Classification.</p>
           </div>
 
-          <!-- Coleottero Robot -->
           <div class="project-card" data-category="robotics">
-   
             <h3>Coleottero Renewable Robot</h3>
-            <p>
-              Built at the Enel Green Power hackathon: a bio-inspired Beetle for inspection & maintenance in solar and not only renewable plants.
-            </p>
+            <p>Built at the Enel Green Power hackathon: a bio-inspired beetle for inspection & maintenance in renewable plants.</p>
           </div>
 
-          <!-- TOP Mentoring -->
           <div class="project-card" data-category="education">
-           
             <h3>TOP Online Tutoring</h3>
-            <p>
-              Mentor in Cariplo-Bocconi-Harvard-Bicocca program, delivering online support for subjects like Italian,English and Math to middle-schoolers.
-            </p>
+            <p>Mentor in Cariplo-Bocconi-Harvard-Bicocca program, delivering online support for Italian, English, and Math to middle-schoolers.</p>
           </div>
         </div>
       </div>
@@ -104,13 +81,11 @@
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <p>© 2025 Emanuele Andaloro</p>
     </div>
   </footer>
 
-  <!-- External Filter JS -->
-  <script src="/js/projects.js"></script>
 </body>
 </html>
