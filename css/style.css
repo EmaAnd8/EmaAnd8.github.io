@@ -1,12 +1,11 @@
 /* ---------- Variables & Reset ---------- */
-:root {
-  --primary: #0d6efd;
-  --dark: #212529;
+:root{
+  --primary: #0077cc;
+  --dark: #222;
   --muted: #666;
-  --bg: #ffffff;
+  --bg: #fff;
   --card: #f7f8fa;
-  --white: #ffffff;
-  --light-blue: #f8faff;
+  --white: #fff;
 
   --container: 1000px;
   --space-1: .5rem;
@@ -17,9 +16,9 @@
 
 *,
 *::before,
-*::after { box-sizing: border-box; margin: 0; padding: 0; }
+*::after{ box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; }
 
 body{
   font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -37,7 +36,7 @@ a:hover{ text-decoration: underline; }
   padding-inline: var(--space-2);
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header (matches other pages) ---------- */
 .site-header{
   position: sticky; top: 0; z-index: 100;
   border-bottom: 1px solid #eee;
@@ -75,10 +74,10 @@ a:hover{ text-decoration: underline; }
   font-weight: 600;
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero (same scale & buttons as others) ---------- */
 .hero{
   padding-block: clamp(3rem, 8vw, 5rem);
-  background: var(--light-blue);
+  background: #f8faff; /* light accent used on other pages */
   text-align: center;
 }
 .hero .hero-inner{
@@ -99,7 +98,7 @@ a:hover{ text-decoration: underline; }
   font-size: clamp(1rem, 2.5vw, 1.125rem);
 }
 
-/* Buttons */
+/* Buttons (identical to profile/projects) */
 .btn{
   display: inline-block;
   padding: .75rem 1.5rem;
@@ -134,7 +133,7 @@ a:hover{ text-decoration: underline; }
   color: var(--white);
 }
 
-/* ---------- About ---------- */
+/* ---------- About (same spacing/colors) ---------- */
 .about{
   padding-block: var(--space-4);
   background: var(--white);
@@ -170,7 +169,7 @@ a:hover{ text-decoration: underline; }
   box-shadow: 0 6px 20px rgba(0,0,0,.08);
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Footer (matches other pages) ---------- */
 .site-footer{
   border-top: 1px solid #eee;
   background: var(--white);
@@ -189,4 +188,3 @@ a:hover{ text-decoration: underline; }
     text-align: center;
   }
 }
-
