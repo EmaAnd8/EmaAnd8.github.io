@@ -5,6 +5,13 @@
   color: var(--primary);
   font-weight: 600;
 }
+.avatar{
+  width: 160px;          /* pick any size */
+  aspect-ratio: 1 / 1;   /* make the box a square */
+  border-radius: 50%;    /* circle */
+  object-fit: cover;     /* crop to fill the square */
+  display: block;        /* removes inline gap */
+}
 
 /* Tabs */
 .tabs {
