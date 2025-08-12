@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Emanuele Andaloro • Portfolio</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
+  <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
         <a href="index.html">Emanuele Andaloro</a>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="profile.html">Profile</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
@@ -29,44 +26,40 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
+    <div class="container hero-inner">
       <h2>Hi, I’m <span>Emanuele Andaloro</span></h2>
       <p>
-        Master’s candidate in Computer Science &amp; Engineering at 
-        Politecnico di Milano. I build embedded-AI systems and explore secure, 
-        high-performance edge applications.
+        Master’s candidate in Computer Science &amp; Engineering at Politecnico di Milano.
+        I build embedded-AI systems and explore secure, high-performance edge applications.
       </p>
-      <a href="projects.html" class="btn primary">View Projects</a>
-      <a href="profile.html" class="btn outline">About Me</a>
+      <div>
+        <a href="projects.html" class="btn primary">View Projects</a>
+        <a href="profile.html" class="btn outline">About Me</a>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section class="about">
     <div class="container about-container">
-      <!-- Left: text + contact -->
       <div class="about-text">
         <h3>About Me</h3>
         <p>
-          I’m specializing in embedded deep learning, blockchain 
-          security, and hardware acceleration. Currently pursuing my Master’s 
-          at Politecnico di Milano.
+          I’m specializing in embedded deep learning, blockchain security, and hardware acceleration.
+          Currently pursuing my Master’s at Politecnico di Milano.
         </p>
         <ul class="contact-list">
           <li><strong>Email:</strong>
             <a href="mailto:emanu24.anda@gmail.com">emanu24.anda@gmail.com</a>
           </li>
           <li><strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/emanuele-andaloro/">
-              /in/emanuele-andaloro
-            </a>
+            <a href="https://www.linkedin.com/in/emanuele-andaloro/">/in/emanuele-andaloro</a>
           </li>
           <li><strong>GitHub:</strong>
             <a href="https://github.com/EmaAnd8">github.com/EmaAnd8</a>
           </li>
         </ul>
       </div>
-      <!-- Right: profile image -->
       <div class="about-image">
         <img src="images/profile.jpeg" alt="Emanuele Andaloro">
       </div>
@@ -74,7 +67,7 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <p>© 2025 Emanuele Andaloro</p>
     </div>
@@ -82,5 +75,3 @@
 
 </body>
 </html>
-
-
