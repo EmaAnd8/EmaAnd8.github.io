@@ -49,7 +49,7 @@ a:hover{ text-decoration: underline; }
 .logo a{
   font-weight: 700;
   font-size: 1.1rem;
-  color: var(--dark);
+  color: var(--primary);
   text-decoration: none;
 }
 
