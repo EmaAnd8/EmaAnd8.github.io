@@ -4,20 +4,19 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Profile • Emanuele Andaloro</title>
-  <link rel="stylesheet" href="/css/style.css"/>
-  <link rel="stylesheet" href="/css/profile.css"/>
+  <link rel="stylesheet" href="css/profile.css"/>
   <script src="/js/profile.js" defer></script>
 </head>
 <body>
 
   <!-- Header -->
-  <header>
+  <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
         <a href="index.html">Emanuele Andaloro</a>
       </div>
-      <nav>
-        <ul>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="profile.html" class="active">Profile</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -27,33 +26,34 @@
   </header>
 
   <!-- Hero -->
-  <div class="avatar-wrap">
-  <img src="images/profile.jpeg" alt="Emanuele Andaloro">
-</div>
-
   <section class="hero">
-    <div class="container">
-      <h2>About <span>Me</span></h2>
-      <p>
-        I’m a Master’s candidate in Computer Science &amp; Engineering at Politecnico di Milano, specializing
-        in machine learning for cybersecurity, hardware acceleration, blockchain, and complex software engineering.
-      </p>
+    <div class="container hero-inner">
+      <div class="avatar-wrap" aria-hidden="true">
+        <img src="images/profile.jpeg" alt="Profile picture of Emanuele Andaloro">
+      </div>
+      <div class="hero-copy">
+        <h2>About <span>Me</span></h2>
+        <p>
+          I’m a Master’s candidate in Computer Science &amp; Engineering at Politecnico di Milano, specializing
+          in machine learning for cybersecurity, hardware acceleration, blockchain, and complex software engineering.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Profile Tabs -->
   <section class="profile">
     <div class="container">
-      <div class="tabs">
-        <button data-tab="about" class="active">About</button>
-        <button data-tab="education">Education</button>
-        <button data-tab="experience">Experience</button>
-        <button data-tab="skills">Skills</button>
-        <button data-tab="volunteering">Volunteering</button>
+      <div class="tabs" role="tablist" aria-label="Profile sections">
+        <button data-tab="about" class="active" role="tab" aria-selected="true" aria-controls="about">About</button>
+        <button data-tab="education" role="tab" aria-selected="false" aria-controls="education">Education</button>
+        <button data-tab="experience" role="tab" aria-selected="false" aria-controls="experience">Experience</button>
+        <button data-tab="skills" role="tab" aria-selected="false" aria-controls="skills">Skills</button>
+        <button data-tab="volunteering" role="tab" aria-selected="false" aria-controls="volunteering">Volunteering</button>
       </div>
 
       <div class="tab-contents">
-        <div id="about" class="tab-content active">
+        <div id="about" class="tab-content active" role="tabpanel" aria-labelledby="about-tab">
           <h3>About Me</h3>
           <p>
             I’m Emanuele, a Computer Science and Engineering student with a passion for blockchain,
@@ -67,7 +67,7 @@
           </ul>
         </div>
 
-        <div id="education" class="tab-content">
+        <div id="education" class="tab-content" role="tabpanel" aria-labelledby="education-tab">
           <h3>Education</h3>
           <ul>
             <li>
@@ -88,7 +88,7 @@
           </ul>
         </div>
 
-        <div id="experience" class="tab-content">
+        <div id="experience" class="tab-content" role="tabpanel" aria-labelledby="experience-tab">
           <h3>Experience</h3>
           <ul>
             <li>
@@ -102,7 +102,7 @@
           </ul>
         </div>
 
-        <div id="skills" class="tab-content">
+        <div id="skills" class="tab-content" role="tabpanel" aria-labelledby="skills-tab">
           <h3>Skills</h3>
           <ul>
             <li><strong>Programming:</strong> C++, C, Java, Python, C#, JavaScript, PHP, SQL, Flutter, VHDL, Arduino, Node.js</li>
@@ -111,12 +111,12 @@
           </ul>
         </div>
 
-        <div id="volunteering" class="tab-content">
+        <div id="volunteering" class="tab-content" role="tabpanel" aria-labelledby="volunteering-tab">
           <h3>Volunteering</h3>
           <ul>
             <li><strong>AVIS Blood Donor</strong> — Nov 2022 – Present</li>
             <li><strong>TOP Program Mentor</strong> — STEM tutor for middle-school students</li>
-            <li><strong> Volunteering at the 38th IEEE IPDPS Conference in San Francisco </strong></li>
+            <li><strong>Volunteering at the 38th IEEE IPDPS Conference in San Francisco</strong></li>
           </ul>
         </div>
       </div>
@@ -124,12 +124,11 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <p>© 2025 Emanuele Andaloro</p>
     </div>
   </footer>
-
 
 </body>
 </html>
