@@ -1,83 +1,193 @@
-/* css/profile.css */
+/* ---------- Base & Theme ---------- */
+:root{
+  --primary: #0077cc;
+  --dark: #222;
+  --muted: #666;
+  --bg: #fff;
+  --card: #f7f8fa;
+  --white: #fff;
 
-/* Active link highlight */
-.header-inner nav a.active {
+  /* rhythm */
+  --container: 1000px;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--dark);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a{ color: var(--primary); text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.container{
+  width: min(100%, var(--container));
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  border-bottom: 1px solid #eee;
+  background: var(--white);
+}
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: var(--space-2);
+}
+.logo a{
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+}
+.nav-list a{
+  color: var(--muted);
+  font-weight: 500;
+  text-decoration: none;
+  padding: .25rem .125rem;
+}
+.nav-list a.active{
   color: var(--primary);
   font-weight: 600;
 }
+
+/* ---------- Hero ---------- */
+.hero{
+  padding-block: var(--space-4);
+}
+.hero-inner{
+  display: grid;
+  justify-items: center;     /* centers avatar & text horizontally */
+  gap: var(--space-3);
+  text-align: center;
+}
+
 .avatar-wrap{
-  width: 160px;
+  width: 168px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  overflow: hidden;      /* clip to the circle */
+  overflow: hidden;          /* clip to the circle */
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
 }
 .avatar-wrap img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
+.hero-copy h2{
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  margin: 0 0 .25rem 0;
+}
+.hero-copy h2 span{ color: var(--primary); }
+.hero-copy p{
+  margin: 0;
+  color: var(--muted);
+  max-width: 60ch;
+}
 
-/* Tabs */
-.tabs {
+/* ---------- Tabs ---------- */
+.profile{
+  padding-block: var(--space-4);
+  background: var(--card);
+}
+
+.tabs{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  gap: .5rem;
   margin-bottom: 2rem;
 }
-.tabs button {
+.tabs button{
   background: transparent;
   border: 2px solid var(--primary);
   color: var(--primary);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  font-size: .9rem;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  transition: background .25s, color .25s, transform .1s;
 }
+.tabs button:hover{ transform: translateY(-1px); }
 .tabs button.active,
-.tabs button:hover {
+.tabs button:focus-visible{
   background: var(--primary);
   color: var(--white);
+  outline: none;
 }
 
 /* Tab contents */
-.tab-contents .tab-content {
+.tab-contents{
+  max-width: 860px;
+  margin: 0 auto;
+  padding-inline: var(--space-2);
+  text-align: left;          /* content left-aligned while centered in page */
+}
+.tab-contents .tab-content{
   display: none;
-  animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn .35s ease-out both;
 }
-.tab-contents .tab-content.active {
-  display: block;
-}
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+.tab-contents .tab-content.active{ display: block; }
+
+@keyframes fadeIn{
+  from{ opacity: 0; transform: translateY(8px); }
+  to  { opacity: 1; transform: translateY(0); }
 }
 
 /* Headings and lists inside tabs */
-.tab-content h3 {
-  font-size: 1.75rem;
+.tab-content h3{
+  font-size: 1.6rem;
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
 }
-.tab-content ul {
+.tab-content ul{
   list-style: disc inside;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.25rem 0;
+  padding: 0;
 }
-.tab-content ul li {
-  margin-bottom: 0.75rem;
+.tab-content ul li{
+  margin-bottom: .65rem;
   color: var(--dark);
 }
+.contact-list a{ word-break: break-word; }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .tabs {
-    gap: 0.25rem;
-  }
-  .tabs button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
+/* ---------- Footer ---------- */
+.site-footer{
+  border-top: 1px solid #eee;
+  background: var(--white);
+  padding-block: var(--space-3);
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 600px){
+  .tabs{ gap: .25rem; }
+  .tabs button{
+    padding: .4rem .8rem;
+    font-size: .85rem;
   }
 }
