@@ -3,40 +3,82 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Emanuele Andaloro — M.Sc. Computer Science and Engineering at Politecnico di Milano. Machine learning, edge AI, and language tooling."/>
+  <meta name="color-scheme" content="light dark"/>
   <title>Profile • Emanuele Andaloro</title>
   <link rel="stylesheet" href="css/profile.css"/>
-  <script src="/js/profile.js" defer></script>
+  <script src="js/profile.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
-        <a href="index.html">Emanuele Andaloro</a>
+        <a href="index.html">Emanuele&nbsp;Andaloro</a>
       </div>
       <nav aria-label="Primary">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="profile.html" class="active">Profile</a></li>
+          <li><a href="profile.html" class="active" aria-current="page">Profile</a></li>
           <li><a href="projects.html">Projects</a></li>
         </ul>
       </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
     </div>
   </header>
+
+  <main id="main">
 
   <!-- Hero -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="avatar-wrap" aria-hidden="true">
-        <img src="images/profile.jpeg" alt="Profile picture of Emanuele Andaloro">
+      <div class="avatar-wrap">
+        <img src="images/profile.jpeg" alt="Portrait of Emanuele Andaloro" width="176" height="176"/>
       </div>
       <div class="hero-copy">
-        <h2>About <span>Me</span></h2>
-        <p>
-          I’m a Master’s candidate in Computer Science &amp; Engineering at Politecnico di Milano, my favourite
-          topics are machine learning for cybersecurity, hardware acceleration, blockchain, and complex software engineering.
+        <p class="eyebrow">M.Sc. Computer Science &amp; Engineering</p>
+        <h1>About <span>Me</span></h1>
+        <p class="lede">
+          I&rsquo;m a Master&rsquo;s candidate at Politecnico di Milano working at the intersection of
+          machine learning, edge AI, and low-level systems &mdash; from quantised vision models running
+          on microcontrollers to language tooling written in C++ and MLIR.
         </p>
+        <ul class="hero-tags">
+          <li>Machine learning</li>
+          <li>Edge AI</li>
+          <li>Cybersecurity</li>
+          <li>Compilers &amp; language tooling</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="cv.pdf">Download CV</a>
+          <a class="btn btn-ghost" href="mailto:emanu24.anda@gmail.com">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats" aria-label="Highlights">
+    <div class="container stats-inner">
+      <div class="stat">
+        <span class="stat-value">110<span class="stat-sub">/110</span></span>
+        <span class="stat-label">B.Sc. final grade</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">2</span>
+        <span class="stat-label">Research publications</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">ETH</span>
+        <span class="stat-label">Zürich summer school</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">8+</span>
+        <span class="stat-label">Research &amp; eng. projects</span>
       </div>
     </div>
   </section>
@@ -45,90 +87,371 @@
   <section class="profile">
     <div class="container">
       <div class="tabs" role="tablist" aria-label="Profile sections">
-        <button data-tab="about" class="active" role="tab" aria-selected="true" aria-controls="about">About</button>
-        <button data-tab="education" role="tab" aria-selected="false" aria-controls="education">Education</button>
-        <button data-tab="experience" role="tab" aria-selected="false" aria-controls="experience">Experience</button>
-        <button data-tab="skills" role="tab" aria-selected="false" aria-controls="skills">Skills</button>
-        <button data-tab="volunteering" role="tab" aria-selected="false" aria-controls="volunteering">Volunteering</button>
+        <button id="tab-about"        data-tab="about"        role="tab" aria-selected="true"  aria-controls="about"        class="active">About</button>
+        <button id="tab-education"    data-tab="education"    role="tab" aria-selected="false" aria-controls="education"    tabindex="-1">Education</button>
+        <button id="tab-publications" data-tab="publications" role="tab" aria-selected="false" aria-controls="publications" tabindex="-1">Publications</button>
+        <button id="tab-projects"     data-tab="projects"     role="tab" aria-selected="false" aria-controls="projects"     tabindex="-1">Projects</button>
+        <button id="tab-experience"   data-tab="experience"   role="tab" aria-selected="false" aria-controls="experience"   tabindex="-1">Experience</button>
+        <button id="tab-skills"       data-tab="skills"       role="tab" aria-selected="false" aria-controls="skills"       tabindex="-1">Skills</button>
+        <button id="tab-volunteering" data-tab="volunteering" role="tab" aria-selected="false" aria-controls="volunteering" tabindex="-1">Volunteering</button>
       </div>
 
       <div class="tab-contents">
-        <div id="about" class="tab-content active" role="tabpanel" aria-labelledby="about-tab">
-          <h3>About Me</h3>
+
+        <!-- ABOUT -->
+        <div id="about" class="tab-content active" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
+          <h2>About me</h2>
           <p>
-            I’m Emanuele, a Computer Science and Engineering student with a passion for blockchain,
-            cybersecurity, and hardware acceleration. I describe myself as an eclectic and curious
-            person who adapts seamlessly to any context, eagerly embracing new challenges and ideas.
+            I&rsquo;m Emanuele, a Computer Science and Engineering student with a passion for machine
+            learning, cybersecurity, and edge AI systems. I describe myself as an eclectic and curious
+            person who adapts seamlessly to any context. I like to explore different ideas and I eagerly
+            embrace new challenges and opportunities.
           </p>
+          <p>
+            What I enjoy most is the point where models meet hardware: making a network small enough and
+            fast enough to be genuinely useful on a constrained device, and building the tooling that makes
+            that work reproducible.
+          </p>
+
+          <h3>Contact</h3>
           <ul class="contact-list">
-            <li><strong>Email:</strong> <a href="mailto:emanu24.anda@gmail.com">emanu24.anda@gmail.com</a></li>
-            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/emanuele-andaloro/">/in/emanuele-andaloro</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/EmaAnd8">github.com/EmaAnd8</a></li>
-          </ul>
-        </div>
-
-        <div id="education" class="tab-content" role="tabpanel" aria-labelledby="education-tab">
-          <h3>Education</h3>
-          <ul>
             <li>
-              <strong>Politecnico di Milano</strong><br/>
-              Master’s in Computer Science &amp; Engineering<br/>
-              Sept 2023 – Present (PoliMi Ambassador candidate)
+              <span class="contact-key">Email</span>
+              <a href="mailto:emanu24.anda@gmail.com">emanu24.anda@gmail.com</a>
             </li>
             <li>
-              <strong>Università di Catania</strong><br/>
-              Bachelor’s in Computer Science &amp; Engineering, 110/110<br/>
-              Sept 2018 – Feb 2023
+              <span class="contact-key">Phone</span>
+              <a href="tel:+393888868608">+39 388 886 8608</a>
             </li>
             <li>
-              <strong>I.T.T. “Ettore Majorana”</strong><br/>
-              High School Diploma <br/>
-              100/100, Sept 2014 – Jun 2018
+              <span class="contact-key">Location</span>
+              <span>Milano, Italy</span>
+            </li>
+            <li>
+              <span class="contact-key">LinkedIn</span>
+              <a href="https://www.linkedin.com/in/emanuele-andaloro/" rel="noopener">/in/emanuele-andaloro</a>
+            </li>
+            <li>
+              <span class="contact-key">GitHub</span>
+              <a href="https://github.com/EmaAnd8" rel="noopener">github.com/EmaAnd8</a>
             </li>
           </ul>
         </div>
 
-        <div id="experience" class="tab-content" role="tabpanel" aria-labelledby="experience-tab">
-          <h3>Experience</h3>
-          <ul>
-            <li>
-              <strong>Explorer Tech</strong> (Computer Repair) — Sep 2017 – Oct 2017<br/>
-             
+        <!-- EDUCATION -->
+        <div id="education" class="tab-content" role="tabpanel" aria-labelledby="tab-education" tabindex="0">
+          <h2>Education</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>Politecnico di Milano</h3>
+                <span class="period">Sept 2023 &ndash; Present</span>
+              </div>
+              <p class="role">Master&rsquo;s Degree (M.Sc.) in Computer Science &amp; Engineering</p>
+              <p class="detail">Predicted final grade 110/110.</p>
+              <p class="detail">
+                <strong>Thesis:</strong> &ldquo;ML-Based Fraud Detection for Public Transport Ticketing Systems&rdquo;
+              </p>
             </li>
-            <li>
-              <strong>Nagual Informatica</strong> (Support) — Jul 2015 – Aug 2015<br/>
-              Provided hardware/software support,   managed maintenance and deployed server environments. 
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>Università di Catania</h3>
+                <span class="period">Sept 2018 &ndash; Feb 2023</span>
+              </div>
+              <p class="role">Bachelor&rsquo;s Degree (B.Sc.) in Computer Science &amp; Engineering</p>
+              <p class="detail">Graduated with the highest score, 110/110.</p>
+              <p class="detail">
+                <strong>Thesis:</strong> &ldquo;Cost/Performance Evaluation of Different Data Quantization
+                Levels in Hardware Accelerators for CNN&rdquo;
+              </p>
             </li>
-          </ul>
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>I.T.T. &ldquo;Ettore Majorana&rdquo;</h3>
+                <span class="period">Sept 2014 &ndash; Jun 2018</span>
+              </div>
+              <p class="role">High School Diploma &mdash; Industrial Computer Technician, Telecommunications</p>
+              <p class="detail">Graduated with the highest grade, 100/100.</p>
+            </li>
+          </ol>
+
+          <h3 class="section-sub">Summer schools &amp; courses</h3>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>ETH Zürich</h3>
+                <span class="period">Aug 2026</span>
+              </div>
+              <p class="role">
+                Summer School &mdash; &ldquo;Co-creating Transformative Knowledge: Inter- and
+                Transdisciplinary Research in Practice&rdquo;
+              </p>
+              <p class="detail">
+                Completed. Selected through a competitive process; scholarship awarded by the
+                ENHANCE alliance.
+              </p>
+            </li>
+          </ol>
         </div>
 
-        <div id="skills" class="tab-content" role="tabpanel" aria-labelledby="skills-tab">
-          <h3>Skills</h3>
-          <ul>
-            <li><strong>Programming:</strong> C++, C, Java, Python, C#, JavaScript, PHP, SQL, Flutter, VHDL, Arduino, Node.js</li>
-            <li><strong>Tech Stack:</strong> Laravel, Flask, MongoDB, DynamoDB, Neo4J, XAMPP, Raspberry Pi</li>
-            <li><strong>Languages:</strong> Italian (native), English (Cambridge First), Spanish (good)</li>
-          </ul>
+        <!-- PUBLICATIONS -->
+        <div id="publications" class="tab-content" role="tabpanel" aria-labelledby="tab-publications" tabindex="0">
+          <h2>Publications</h2>
+          <ol class="pub-list">
+            <li class="pub">
+              <span class="badge badge-ok">Accepted</span>
+              <p class="pub-title">
+                Real-time AI-powered moving pattern recognition from low-cost accelerometer and gyroscope data
+              </p>
+              <p class="pub-meta">
+                E. Andaloro, R. Russo, F. Dercole &middot;
+                7th International Interdisciplinary Chaos Symposium on Chaos and Complex Systems (SCCS 2026),
+                Athens, Greece &middot; June 2026
+              </p>
+              <p class="pub-note">Springer proceedings</p>
+            </li>
+            <li class="pub">
+              <span class="badge badge-pending">Under review</span>
+              <p class="pub-title">
+                Wearable AI-powered clinical documentation system using AWS HealthScribe and Bedrock on Edge Devices
+              </p>
+              <p class="pub-meta">
+                E. Andaloro et al. &middot;
+                UCAmI 2026 &mdash; Ubiquitous Computing and Ambient Intelligence &middot; 2026
+              </p>
+            </li>
+          </ol>
         </div>
 
-        <div id="volunteering" class="tab-content" role="tabpanel" aria-labelledby="volunteering-tab">
-          <h3>Volunteering</h3>
-          <ul>
-            <li><strong>AVIS Blood Donor</strong> — Nov 2022 – Present</li>
-            <li><strong>TOP Program Mentor</strong> — STEM tutor for middle-school students</li>
-            <li><strong>Volunteering at the 38th IEEE IPDPS Conference in San Francisco</strong></li>
-          </ul>
+        <!-- PROJECTS -->
+        <div id="projects" class="tab-content" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
+          <h2>Projects</h2>
+          <div class="card-grid">
+
+            <article class="card">
+              <h3>ML-based fraud detection for public transport</h3>
+              <p class="card-kicker">M.Sc. thesis</p>
+              <p>
+                A machine learning pipeline for detecting forged and fraudulent tickets across two datasets
+                (validation and sold tickets). Covers anomaly detection, threshold calibration across
+                cross-validation and full-data models, and a split-abuse detection pipeline for season passes.
+              </p>
+              <ul class="tag-list">
+                <li>Anomaly detection</li><li>Python</li><li>Calibration</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>RLC language server</h3>
+              <p class="card-kicker">Open-source contribution</p>
+              <p>
+                Improved the LSP tooling of the RLC language in C++/MLIR, supervised by the author.
+                Implemented scope-aware code completion, completion ranking via <code>sortText</code>,
+                document symbols (Outline / Go to Symbol), and a configurable stdlib path. Built a
+                coverage-guided fuzzer with libFuzzer to exercise the LSP server.
+              </p>
+              <ul class="tag-list">
+                <li>C++</li><li>MLIR</li><li>LSP</li><li>libFuzzer</li>
+              </ul>
+              <p class="card-link">
+                <a href="https://github.com/rl-language/rlc" rel="noopener">rl-language/rlc &rarr;</a>
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Leonardo Project at NECSTLab</h3>
+              <p class="card-kicker">Hackathon winner</p>
+              <p>
+                An AI-driven well-being app fostering empathetic connections through voice-based
+                interaction. Won the <em>How To Hack The NECSTCamp</em> hackathon, leading to an invitation
+                to the NECST Group Conference (NGC14) in San Francisco, where we presented to major tech
+                companies and startups.
+              </p>
+              <ul class="tag-list">
+                <li>Voice AI</li><li>Product</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>CNN &amp; custom ViT on STM32N6 with NPU</h3>
+              <p class="card-kicker">Edge AI</p>
+              <p>
+                Deployed CNNs and a customised Vision Transformer on the STM32N6570-DK board, leveraging its
+                Neural Processing Unit with model quantisation for real-time inference.
+              </p>
+              <ul class="tag-list">
+                <li>Quantisation</li><li>ViT</li><li>NPU</li><li>Embedded</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>BlockVerse</h3>
+              <p class="card-kicker">Research project</p>
+              <p>
+                Built a dashboard integrated with Katena, a blockchain application management framework
+                compatible with Ethereum. Implemented topology visualisation, management, and YAML export;
+                handled backend interactions and authentication with Firebase.
+              </p>
+              <ul class="tag-list">
+                <li>Ethereum</li><li>Firebase</li><li>Dashboards</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>Sensor data collection app</h3>
+              <p class="card-kicker">Mobile</p>
+              <p>
+                A Flutter application for collecting real-time magnetometer, accelerometer, and gyroscope
+                data, with Firebase cloud storage and visualisation.
+              </p>
+              <ul class="tag-list">
+                <li>Flutter</li><li>Firebase</li><li>Sensors</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>E-Trash reflectance spectroscopy</h3>
+              <p class="card-kicker">Prototype &middot; startup collaboration</p>
+              <p>
+                A low-cost reflectance spectroscopy module for automatic waste classification, developed
+                with the startup E-Trash and Politecnico di Milano.
+              </p>
+              <ul class="tag-list">
+                <li>Spectroscopy</li><li>Classification</li><li>Hardware</li>
+              </ul>
+            </article>
+
+          </div>
         </div>
+
+        <!-- EXPERIENCE -->
+        <div id="experience" class="tab-content" role="tabpanel" aria-labelledby="tab-experience" tabindex="0">
+          <h2>Experience</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>Explorer Tech</h3>
+                <span class="period">Sep 2017 &ndash; Oct 2017</span>
+              </div>
+              <p class="role">Computer repair shop</p>
+              <ul class="detail-list">
+                <li>Managed computer maintenance, ensuring optimal performance and troubleshooting issues.</li>
+                <li>Deployed server environments, emphasising infrastructure and networking skills.</li>
+              </ul>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>Nagual Informatica</h3>
+                <span class="period">Jul 2015 &ndash; Aug 2015</span>
+              </div>
+              <p class="role">Computer repair shop</p>
+              <ul class="detail-list">
+                <li>Oversaw computer maintenance and technical support for both hardware and software.</li>
+                <li>Installed and configured Oracle-based server systems.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <!-- SKILLS -->
+        <div id="skills" class="tab-content" role="tabpanel" aria-labelledby="tab-skills" tabindex="0">
+          <h2>Skills</h2>
+
+          <div class="skill-group">
+            <h3>Machine learning &amp; AI</h3>
+            <ul class="chip-list">
+              <li>PyTorch</li><li>TensorFlow Lite</li><li>ONNX Runtime</li><li>CNNs</li>
+              <li>Vision Transformers</li><li>GRU / LSTM</li><li>Anomaly detection</li><li>Edge AI</li>
+              <li>Quantisation</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Programming languages</h3>
+            <ul class="chip-list">
+              <li>C++</li><li>C</li><li>Python</li><li>Java</li><li>C#</li><li>SQL</li>
+              <li>JavaScript</li><li>PHP</li><li>Dart / Flutter</li><li>HTML</li><li>CSS</li>
+              <li>VHDL</li><li>LaTeX</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Technologies &amp; tools</h3>
+            <ul class="chip-list">
+              <li>MLIR</li><li>Node.js</li><li>Laravel</li><li>Flask</li><li>Expo</li>
+              <li>MongoDB</li><li>DynamoDB</li><li>Neo4j</li><li>Elasticsearch</li><li>Kibana</li>
+              <li>XAMPP</li><li>Raspberry Pi</li><li>Arduino</li><li>Vulkan</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Spoken languages</h3>
+            <ul class="lang-list">
+              <li><strong>Italian</strong> <span>Native speaker</span></li>
+              <li><strong>English</strong> <span>Cambridge First &mdash; score 173</span></li>
+              <li><strong>Spanish</strong> <span>Good level</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- VOLUNTEERING -->
+        <div id="volunteering" class="tab-content" role="tabpanel" aria-labelledby="tab-volunteering" tabindex="0">
+          <h2>Volunteering</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>IEEE IPDPS 2024 &mdash; organising team</h3>
+                <span class="period">May 2024 &ndash; Jun 2024</span>
+              </div>
+              <p class="role">IEEE Computer Society</p>
+              <ul class="detail-list">
+                <li>
+                  Volunteered on the organising team for the 38th IEEE International Parallel and
+                  Distributed Processing Symposium in San Francisco.
+                </li>
+                <li>Contributed to conference logistics, attendee support, and event management.</li>
+              </ul>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>TOP &mdash; Online Tutoring Program</h3>
+                <span class="period">Mentor</span>
+              </div>
+              <p class="role">Fondazione Cariplo, with Bocconi, Harvard, and Bicocca universities</p>
+              <ul class="detail-list">
+                <li>
+                  Provided targeted academic support through online tutoring sessions for middle-school
+                  students.
+                </li>
+              </ul>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-head">
+                <h3>Blood donor &mdash; AVIS</h3>
+                <span class="period">Nov 2022 &ndash; Present</span>
+              </div>
+              <p class="role">Field: health</p>
+            </li>
+          </ol>
+        </div>
+
       </div>
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Emanuele Andaloro</p>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Emanuele Andaloro</p>
+      <ul class="footer-links">
+        <li><a href="mailto:emanu24.anda@gmail.com">Email</a></li>
+        <li><a href="https://www.linkedin.com/in/emanuele-andaloro/" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/EmaAnd8" rel="noopener">GitHub</a></li>
+      </ul>
     </div>
   </footer>
-
 </body>
 </html>
+
