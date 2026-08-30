@@ -3,277 +3,67 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Emanuele Andaloro — M.Sc. candidate in Computer Science and Engineering at Politecnico di Milano. Machine learning, edge AI, and language tooling."/>
-  <meta name="color-scheme" content="light dark"/>
   <title>Emanuele Andaloro • Portfolio</title>
   <link rel="stylesheet" href="css/style.css"/>
-  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
-        <a href="index.html">Emanuele&nbsp;Andaloro</a>
+        <a href="index.html">Emanuele Andaloro</a>
       </div>
       <nav aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="profile.html">Profile</a></li>
-          <li><a href="projects.html">Projects</a></li>
         </ul>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">
-        <span class="theme-toggle-icon" aria-hidden="true"></span>
-      </button>
     </div>
   </header>
-
-  <main id="main">
-
   <!-- Hero -->
   <section class="hero">
     <div class="container hero-inner">
-      <p class="eyebrow">Milano, Italy &middot; Politecnico di Milano</p>
-      <h1>Hi, I&rsquo;m <span>Emanuele Andaloro</span></h1>
-      <p class="lede">
-        Master&rsquo;s candidate in Computer Science &amp; Engineering, working where machine
-        learning meets the metal &mdash; quantised models on microcontrollers, anomaly detection
-        at scale, and developer tooling written in C++ and MLIR.
+      <h2>Hi, I’m <span>Emanuele Andaloro</span></h2>
+      <p>
+        Master’s candidate in Computer Science &amp; Engineering at Politecnico di Milano.
+        I build embedded-AI systems and explore secure, high-performance edge applications.
       </p>
-      <ul class="hero-tags">
-        <li>Machine learning</li>
-        <li>Edge AI</li>
-        <li>Cybersecurity</li>
-        <li>Compilers &amp; language tooling</li>
-      </ul>
-      <div class="hero-actions">
-        <a href="profile.html" class="btn primary">View my profile</a>
-        <a href="cv.pdf" class="btn outline">Download CV</a>
-        <a href="mailto:emanu24.anda@gmail.com" class="btn ghost">Get in touch</a>
+      <div>
+
+        <a href="profile.html" class="btn outline">About Me</a>
       </div>
     </div>
   </section>
-
-  <!-- Stats -->
-  <section class="stats" aria-label="Highlights">
-    <div class="container stats-inner">
-      <div class="stat reveal">
-        <span class="stat-value">110<span class="stat-sub">/110</span></span>
-        <span class="stat-label">B.Sc. final grade</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-value">2</span>
-        <span class="stat-label">Research publications</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-value">ETH</span>
-        <span class="stat-label">Zürich summer school</span>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-value">8+</span>
-        <span class="stat-label">Research &amp; eng. projects</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- What I do -->
-  <section class="focus">
-    <div class="container">
-      <header class="section-head">
-        <p class="eyebrow">What I do</p>
-        <h2>Three threads, one interest</h2>
-        <p class="section-sub">
-          Most of my work sits somewhere between a model and the hardware it has to run on.
-        </p>
-      </header>
-
-      <div class="focus-grid">
-        <article class="focus-card reveal">
-          <span class="focus-num">01</span>
-          <h3>Machine learning &amp; edge AI</h3>
-          <p>
-            Training models, then making them small and fast enough to matter: quantisation,
-            CNNs and Vision Transformers deployed to NPUs, real-time inference on constrained
-            devices.
-          </p>
-          <ul class="tag-list">
-            <li>PyTorch</li><li>ONNX Runtime</li><li>TensorFlow Lite</li><li>Quantisation</li>
-          </ul>
-        </article>
-
-        <article class="focus-card reveal">
-          <span class="focus-num">02</span>
-          <h3>Compilers &amp; language tooling</h3>
-          <p>
-            Building the tools developers live inside. Language servers, code completion,
-            document symbols, and coverage-guided fuzzing &mdash; in C++ and MLIR.
-          </p>
-          <ul class="tag-list">
-            <li>C++</li><li>MLIR</li><li>LSP</li><li>libFuzzer</li>
-          </ul>
-        </article>
-
-        <article class="focus-card reveal">
-          <span class="focus-num">03</span>
-          <h3>Security &amp; anomaly detection</h3>
-          <p>
-            Finding the signal that shouldn&rsquo;t be there: fraud detection pipelines,
-            threshold calibration, and abuse patterns hiding in real-world transaction data.
-          </p>
-          <ul class="tag-list">
-            <li>Anomaly detection</li><li>Calibration</li><li>Python</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured work -->
-  <section class="work">
-    <div class="container">
-      <header class="section-head">
-        <p class="eyebrow">Selected work</p>
-        <h2>Things I&rsquo;ve built</h2>
-      </header>
-
-      <div class="work-grid">
-        <article class="work-card reveal">
-          <p class="card-kicker">Open source &middot; C++ / MLIR</p>
-          <h3>RLC language server</h3>
-          <p>
-            Improved the LSP tooling of the RLC language: scope-aware code completion, completion
-            ranking via <code>sortText</code>, document symbols for Outline and Go to Symbol, and a
-            configurable stdlib path. Built a coverage-guided fuzzer with libFuzzer to stress the server.
-          </p>
-          <p class="card-link"><a href="https://github.com/rl-language/rlc" rel="noopener">rl-language/rlc &rarr;</a></p>
-        </article>
-
-        <article class="work-card reveal">
-          <p class="card-kicker">M.Sc. thesis &middot; Politecnico di Milano</p>
-          <h3>ML-based fraud detection for public transport</h3>
-          <p>
-            A machine learning pipeline detecting forged and fraudulent tickets across validation
-            and sales datasets &mdash; anomaly detection, threshold calibration across cross-validation
-            and full-data models, and a split-abuse pipeline for season passes.
-          </p>
-          <p class="card-link"><a href="profile.html#projects">More detail &rarr;</a></p>
-        </article>
-
-        <article class="work-card reveal">
-          <p class="card-kicker">Edge AI &middot; Embedded</p>
-          <h3>CNN &amp; custom ViT on STM32N6 with NPU</h3>
-          <p>
-            Deployed convolutional networks and a customised Vision Transformer to the STM32N6570-DK
-            board, using its Neural Processing Unit with model quantisation for real-time inference.
-          </p>
-          <p class="card-link"><a href="profile.html#projects">More detail &rarr;</a></p>
-        </article>
-      </div>
-
-      <p class="work-more">
-        <a class="btn outline" href="profile.html#projects">See all projects</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Publications -->
-  <section class="pubs">
-    <div class="container">
-      <header class="section-head">
-        <p class="eyebrow">Research</p>
-        <h2>Publications</h2>
-      </header>
-
-      <ol class="pub-list">
-        <li class="pub reveal">
-          <span class="badge badge-ok">Accepted</span>
-          <p class="pub-title">
-            Real-time AI-powered moving pattern recognition from low-cost accelerometer and gyroscope data
-          </p>
-          <p class="pub-meta">
-            E. Andaloro, R. Russo, F. Dercole &middot; SCCS 2026, Athens, Greece &middot; June 2026
-            &middot; Springer proceedings
-          </p>
-        </li>
-        <li class="pub reveal">
-          <span class="badge badge-pending">Under review</span>
-          <p class="pub-title">
-            Wearable AI-powered clinical documentation system using AWS HealthScribe and Bedrock on Edge Devices
-          </p>
-          <p class="pub-meta">
-            E. Andaloro et al. &middot; UCAmI 2026 &mdash; Ubiquitous Computing and Ambient Intelligence
-          </p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
   <!-- About -->
   <section class="about">
     <div class="container about-container">
       <div class="about-text">
-        <p class="eyebrow">About</p>
-        <h2>A bit about me</h2>
+        <h3>About Me</h3>
         <p>
-          I&rsquo;m Emanuele, a Computer Science and Engineering student with a passion for machine
-          learning, cybersecurity, and edge AI systems. I describe myself as an eclectic and curious
-          person who adapts seamlessly to any context, eagerly embracing new challenges and ideas.
-        </p>
-        <p>
-          I graduated with the highest score from Università di Catania, I&rsquo;m finishing my
-          Master&rsquo;s at Politecnico di Milano, and I recently completed a summer school at
-          ETH Zürich on a scholarship from the ENHANCE alliance.
+          I’m Emanuele, a Computer Science and Engineering student with a passion for blockchain, cybersecurity, and hardware acceleration. I describe myself as an eclectic and curious person who adapts seamlessly to any context, eagerly embracing new challenges and ideas.
         </p>
         <ul class="contact-list">
-          <li>
-            <span class="contact-key">Email</span>
+          <li><strong>Email:</strong>
             <a href="mailto:emanu24.anda@gmail.com">emanu24.anda@gmail.com</a>
           </li>
-          <li>
-            <span class="contact-key">LinkedIn</span>
-            <a href="https://www.linkedin.com/in/emanuele-andaloro/" rel="noopener">/in/emanuele-andaloro</a>
+          <li><strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/emanuele-andaloro/">/in/emanuele-andaloro</a>
           </li>
-          <li>
-            <span class="contact-key">GitHub</span>
-            <a href="https://github.com/EmaAnd8" rel="noopener">github.com/EmaAnd8</a>
+          <li><strong>GitHub:</strong>
+            <a href="https://github.com/EmaAnd8">github.com/EmaAnd8</a>
           </li>
         </ul>
       </div>
       <div class="about-image">
-        <img src="images/profile.jpeg" alt="Portrait of Emanuele Andaloro" width="420" height="420"/>
+        <img src="images/profile.jpeg" alt="Emanuele Andaloro">
       </div>
     </div>
   </section>
-
-  <!-- Contact CTA -->
-  <section class="cta">
-    <div class="container cta-inner">
-      <h2>Working on something at the edge?</h2>
-      <p>
-        I&rsquo;m always interested in machine learning that has to run somewhere real, and in the
-        tooling that makes that possible. Happy to talk.
-      </p>
-      <div class="hero-actions">
-        <a class="btn primary" href="mailto:emanu24.anda@gmail.com">Email me</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/emanuele-andaloro/" rel="noopener">Connect on LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  </main>
-
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Emanuele Andaloro</p>
-      <ul class="footer-links">
-        <li><a href="mailto:emanu24.anda@gmail.com">Email</a></li>
-        <li><a href="https://www.linkedin.com/in/emanuele-andaloro/" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/EmaAnd8" rel="noopener">GitHub</a></li>
-      </ul>
+    <div class="container">
+      <p>© 2025 Emanuele Andaloro</p>
     </div>
   </footer>
 </body>
